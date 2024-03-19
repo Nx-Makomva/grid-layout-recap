@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit';
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "aside nav nav nav"
+  "aside main main main"
+  "footer footer footer footer";
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+header, nav, main, aside, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+header {
+  grid-area: header;
+  background-color: black;
+}
+
+nav {
+  grid-area: nav;
+  background-color: sandybrown;
+}
+
+main {
+  grid-area: main;
+  background-color: gainsboro;
+}
+
+aside {
+  grid-area: aside;
+  background-color: orange;
+}
+
+footer {
+  grid-area: footer;
+  background-color: black;
+}
+
+@media screen and (max-width: 468px) {
+  body {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    "footer footer";
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  aside {
+    display: none;
+  }
+}
